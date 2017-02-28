@@ -1,0 +1,19 @@
+{
+  "name": "Order",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "orderItems": {
+      "type": "hasMany",
+      "model": "OrderItem",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

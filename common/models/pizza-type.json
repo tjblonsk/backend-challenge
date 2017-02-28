@@ -1,0 +1,29 @@
+{
+  "name": "PizzaType",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "orderItems": {
+      "type": "hasAndBelongsToMany",
+      "model": "OrderItem",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

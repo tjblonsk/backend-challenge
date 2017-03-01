@@ -8,4 +8,8 @@ module.exports = function(app) {
   .get('/create', function(req, res) {
     res.render('create', {pizzaTypes: [{name: 'marg', price: 1}]})
   })
+  .post('/create', function(req, res) {
+    console.log(req.body)
+    res.send('hi')
+  })
 }

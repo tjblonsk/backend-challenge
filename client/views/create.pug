@@ -1,10 +1,12 @@
 h1 Create Order
 
 body
-  form(action='/api/orders', method='post')
+  form(action='/create', method='post')
     for type in pizzaTypes
       label Pizza Type
-      p= type.name
+      p=type.name
+      input(type='text', value=type.name, hidden=true)
+      br
       label Price
       p= type.price
       label Qty
@@ -12,5 +14,5 @@ body
         option(value='0', selected= true) -- Select --
         for num in [1,2,3,4,5]
           option(value= num)= num
-    p
+    hr
     input(type='submit')

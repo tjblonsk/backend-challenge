@@ -1,11 +1,11 @@
 h1 Create Order
 
 body
-  form(action='/create', method='post')
+  form(action='', method='POST')
     for type in pizzaTypes
       label Pizza Type
       p=type.name
-      input(type='text', value=type.name, hidden=true)
+      input(name='type', type='text', value=type.name, hidden=true)
       br
       label Price
       p= type.price
@@ -13,6 +13,6 @@ body
       select
         option(value='0', selected= true) -- Select --
         for num in [1,2,3,4,5]
-          option(value= num)= num
+          option(value=num, name='orderItems[qty]')= num
     hr
     input(type='submit')

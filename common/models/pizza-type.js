@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function(Pizzatype) {
+module.exports = function(PizzaType) {
 
 };

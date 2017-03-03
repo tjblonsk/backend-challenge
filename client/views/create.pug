@@ -5,14 +5,15 @@ body
     for type in pizzaTypes
       label Pizza Type
       p=type.name
-      input(name='type', type='text', value=type.name, hidden=true)
+      input(name='orderItems[type]', type='text', value=type.id, hidden=true)
       br
       label Price
       p= type.price
       label Qty
+      input(name='orderItems[price]', type='text', value=type.price, hidden=true)
       select
         option(value='0', selected= true) -- Select --
         for num in [1,2,3,4,5]
           option(value=num, name='orderItems[qty]')= num
-    hr
+      hr
     input(type='submit')

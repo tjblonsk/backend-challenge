@@ -19,8 +19,8 @@
       "model": "Order",
       "foreignKey": ""
     },
-    "pizzaTypes": {
-      "type": "hasOne",
+    "pizzaType": {
+      "type": "belongsTo",
       "model": "PizzaType",
       "foreignKey": ""
     }

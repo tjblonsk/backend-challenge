@@ -19,7 +19,7 @@
   "validations": [],
   "relations": {
     "orderItems": {
-      "type": "hasAndBelongsToMany",
+      "type": "hasMany",
       "model": "OrderItem",
       "foreignKey": ""
     }

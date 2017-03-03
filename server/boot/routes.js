@@ -9,10 +9,14 @@ module.exports = function(app) {
     res.render('index', {orders: [{id: 1}, {id: 2}]})
   })
   .get('/create', function(req, res) {
-    res.render('create', {pizzaTypes: [{name: 'marg', price: 1}]})
+    app.models.PizzaType.find(null, function(err, pizzaTypes) {
+      res.render('create', {pizzaTypes: pizzaTypes})
+    });
   })
   .post('/create', function(req, res) {
     console.log(req.body)
+
+
     res.send('hi')
   })
 }
